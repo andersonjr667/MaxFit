@@ -75,6 +75,34 @@ nav ul li a:hover {
   color: #ff4444;
 }
 
+/* Hamburguer Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s;
+}
+
+nav.active .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+nav.active .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+nav.active .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -117,6 +145,7 @@ section {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.8s;
+  scroll-margin-top: 80px; /* Compensa o header fixo */
 }
 
 section.visible {
@@ -213,13 +242,7 @@ section.visible {
   background: rgba(255,255,255,0.05);
 }
 
-/* Footer e Wave */
-.wave {
-  display: block;
-  margin-top: -5px;
-  width: 100%;
-}
-
+/* Footer */
 footer {
   position: relative;
   background: #222;
@@ -254,46 +277,6 @@ footer .social li a:hover {
   color: red;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .planos-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .plano {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  header .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .logo {
-    margin-bottom: 20px;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info {
-    padding-right: 0;
-    text-align: center;
-  }
-}
-
 /* Botões */
 .btn {
   display: inline-block;
@@ -311,4 +294,83 @@ footer .social li a:hover {
   background-color: darkred;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(255,0,0,0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  nav.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .hero {
+    padding: 80px 20px;
+    min-height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .planos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plano {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 140px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .plano.destaque::before {
+    font-size: 0.7rem;
+    right: -35px;
+    padding: 3px 35px;
+  }
+
+  footer .social {
+    gap: 15px;
+  }
 }
