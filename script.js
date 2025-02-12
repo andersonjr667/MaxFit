@@ -65,6 +65,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Menu Hamburguer
+  document.querySelector('.hamburger').addEventListener('click', function() {
+    this.parentElement.classList.toggle('active');
+  });
+
+  // Fechar menu ao clicar em um link (mobile)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const nav = document.querySelector('nav');
+      if (nav.classList.contains('active')) {
+        nav.classList.remove('active');
+      }
+    });
+  });
+
   // Inicializar
   loadComponents();
 });
