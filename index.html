@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaxFit Academia</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="MaxFit Logo">
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Bem-vindo à MaxFit</h1>
+    <p>Transforme seu corpo e mente com os melhores profissionais.</p>
+    <a href="#planos" class="btn">Conheça nossos planos</a>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre nós</h2>
+    <p>A MaxFit é uma academia focada em resultados, com equipamentos modernos e uma equipe altamente qualificada para ajudá-lo a atingir seus objetivos.</p>
+  </section>
+
+  <section id="planos">
+    <h2>Nossos Planos</h2>
+    <div class="planos-container">
+      <div class="plano">
+        <h3><i class="icon-basic"></i>Básico</h3>
+        <p>Acesso livre das 6h às 18h</p>
+        <p>Academia + Área de musculação</p>
+        <p class="price">R$ 79,90/mês</p>
+      </div>
+      <div class="plano destaque">
+        <h3><i class="icon-premium"></i>Premium</h3>
+        <p>Acesso 24h e aulas personalizadas</p>
+        <p>Todos os benefícios + Aulas em grupo</p>
+        <p class="price">R$ 129,90/mês</p>
+      </div>
+      <div class="plano">
+        <h3><i class="icon-vip"></i>VIP</h3>
+        <p>Personal trainer e acompanhamento</p>
+        <p>Plano Premium + Nutricionista</p>
+        <p class="price">R$ 199,90/mês</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p>Entre em contato para mais informações:</p>
+        <p>📧 Email: contato@maxfit.com.br</p>
+        <p>📱 WhatsApp: (11) 98765-4321</p>
+        <p>📞 Telefone: (11) 1234-5678</p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Nome" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" rows="5" placeholder="Mensagem" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MaxFit Academia. Todos os direitos reservados.</p>
+    <ul class="social">
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
