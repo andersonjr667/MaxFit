@@ -205,6 +205,72 @@ section.visible {
   margin-top: 20px;
 }
 
+/* Botões de Assinar Plano */
+.plano .btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Carrossel */
+.carrossel {
+  padding: 50px 0;
+  background: #111;
+}
+
+.carrossel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,0,0,0.1);
+}
+
+.carrossel-item {
+  display: none;
+  position: relative;
+  transition: opacity 0.5s ease;
+}
+
+.carrossel-item.active {
+  display: block;
+}
+
+.carrossel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carrossel-controle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 100;
+}
+
+.carrossel-controle:hover {
+  background: rgba(255,0,0,0.7);
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
 /* Contato */
 .contact-container {
   display: grid;
@@ -353,6 +419,10 @@ footer .social li a:hover {
     padding-right: 0;
     text-align: center;
   }
+
+  .carrossel-item img {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -372,5 +442,9 @@ footer .social li a:hover {
 
   footer .social {
     gap: 15px;
+  }
+
+  .carrossel-item img {
+    height: 200px;
   }
 }
