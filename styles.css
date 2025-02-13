@@ -237,9 +237,11 @@ section.visible {
 
 .carrossel-item img {
   width: 80%; /* Largura ajustada */
-  height: 300px; /* Altura ajustada */
+  height: 350px; /* Altura ajustada */
   object-fit: cover;
   border-radius: 10px;
+  margin: 0 auto; /* Centraliza a imagem */
+  display: block; /* Necessário para o margin auto funcionar */
 }
 
 .carrossel-controle {
