@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(response => response.json())
     .then(data => {
-      alert(data.message); // Exibe uma mensagem de sucesso
+      alert(data.message);
     })
     .catch((error) => {
       console.error('Erro:', error);
@@ -80,6 +80,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Carrossel
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carrossel-item');
+  const totalSlides = slides.length;
+
+  function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    currentSlide = (n + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add('active');
+  }
+
+  // Controles do carrossel
+  document.querySelector('.next').addEventListener('click', () => showSlide(currentSlide + 1));
+  document.querySelector('.prev').addEventListener('click', () => showSlide(currentSlide - 1));
+
+  // Auto-avanço do carrossel
+  setInterval(() => showSlide(currentSlide + 1), 5000);
+
   // Inicializar
   loadComponents();
-});
+}); 
