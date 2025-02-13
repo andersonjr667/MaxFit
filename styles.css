@@ -236,8 +236,8 @@ section.visible {
 }
 
 .carrossel-item img {
-  width: 100%;
-  height: 300px; /* Tamanho ajustado */
+  width: 80%; /* Largura ajustada */
+  height: 300px; /* Altura ajustada */
   object-fit: cover;
   border-radius: 10px;
 }
